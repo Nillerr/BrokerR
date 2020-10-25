@@ -21,3 +21,6 @@ write `Incoming Request: <json>` to the console.
 A server is provided in `BrokerR.Http.Server`, however the code is rather simple and can easily be copied 
 into an existing ASP.NET Core application, if you wish to not have a dedicated `BrokerR.Http.Server` running.
 
+## Purpose
+
+`BrokerR.Http` was developed to enable consuming webhooks from external systems in local development environments.
