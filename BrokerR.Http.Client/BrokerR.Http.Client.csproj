@@ -29,7 +29,11 @@
         <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="3.1.9"/>
     </ItemGroup>
 
-    <ItemGroup>
+    <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
+        <PackageReference Include="BrokerR.Http" Version="1.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(Configuration)' != 'Release' ">
         <ProjectReference Include="..\BrokerR.Http\BrokerR.Http.csproj"/>
     </ItemGroup>
 
