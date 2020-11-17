@@ -16,9 +16,9 @@ jobs:
         with:
           dotnet-version: 3.1.301
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore BrokerR.Http.Client
       - name: Pack
-        run: dotnet pack --configuration Release --no-restore --include-symbols --include-source
+        run: dotnet pack BrokerR.Http.Client --configuration Release --no-restore --include-symbols --include-source
       - name: Publish
         env:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
