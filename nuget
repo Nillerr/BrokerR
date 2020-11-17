@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+NUGET_SOURCE="https://api.nuget.org/v3/index.json"
+
+NUPKG_FILE=$(find BrokerR.Http.Client/bin/Release -name '*.nupkg')
+dotnet nuget push $NUPKG_FILE -k $NUGET_API_KEY -s $NUGET_SOURCE

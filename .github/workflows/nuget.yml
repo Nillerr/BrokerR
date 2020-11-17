@@ -1,0 +1,25 @@
+name: NuGet
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.301
+      - name: Install dependencies
+        run: dotnet restore BrokerR.Http.Client
+      - name: Pack
+        run: dotnet pack BrokerR.Http.Client --configuration Release --no-restore --include-symbols --include-source
+      - name: Publish
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: ./nuget

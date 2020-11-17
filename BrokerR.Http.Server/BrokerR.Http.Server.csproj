@@ -13,4 +13,12 @@
   <ItemGroup>
     <ProjectReference Include="..\BrokerR.Http\BrokerR.Http.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\.github\workflows\nuget.yml">
+      <Link>.github\workflows\nuget.yml</Link>
+    </Content>
+    <Content Include="..\nuget.sh">
+      <Link>.github\workflows\nuget.sh</Link>
+    </Content>
+  </ItemGroup>
 </Project>
