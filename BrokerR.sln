@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerR.Http.Client", "Brok
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerR.Http.Client.Demo", "BrokerR.Http.Client.Demo\BrokerR.Http.Client.Demo.csproj", "{A4476E58-0C6F-4D9D-8585-6E956B613869}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{E1D5D780-92B0-44FB-B473-486F5C06573D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
