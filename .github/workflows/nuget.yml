@@ -15,11 +15,27 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 3.1.301
-      - name: Install dependencies
-        run: dotnet restore BrokerR.Http.Client
-      - name: Pack
-        run: dotnet pack BrokerR.Http.Client --configuration Release --no-restore --include-symbols --include-source
-      - name: Publish
+          
+      - name: Install dependencies BrokerR.Http
+        run: dotnet restore BrokerR.Http
+        
+      - name: Pack BrokerR.Http
+        run: dotnet pack BrokerR.Http --configuration Release --no-restore --include-symbols --include-source
+        
+      - name: Publish BrokerR.Http
         env:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+          NUPKG_PROJECT: BrokerR.Http
+        run: ./nuget
+          
+      - name: Install dependencies BrokerR.Http.Client
+        run: dotnet restore BrokerR.Http.Client
+        
+      - name: Pack BrokerR.Http.Client
+        run: dotnet pack BrokerR.Http.Client --configuration Release --no-restore --include-symbols --include-source
+        
+      - name: Publish BrokerR.Http.Client
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+          NUPKG_PROJECT: BrokerR.Http.Client
         run: ./nuget
