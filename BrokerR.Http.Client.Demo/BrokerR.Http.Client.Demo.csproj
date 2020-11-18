@@ -6,6 +6,7 @@
     <UserSecretsId>2d88430d-d08f-4d04-a77b-521b447bfd29</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BrokerR.Http.Client.Hosting\BrokerR.Http.Client.Hosting.csproj" />
     <ProjectReference Include="..\BrokerR.Http.Client\BrokerR.Http.Client.csproj" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,8 @@
 using System;
-using Microsoft.Extensions.Logging;
 using BrokerR.Http.Client.Logging;
+using Microsoft.Extensions.Logging;
 
-namespace BrokerR.Http.Client.Demo.Hosting
+namespace BrokerR.Http.Client.Hosting
 {
     public static class BrokerRClientLoggingExtensions
     {
@@ -45,8 +45,7 @@ namespace BrokerR.Http.Client.Demo.Hosting
                         // Don't log
                         break;
                     default:
-                        logger()
-                            .LogWarning($"Unknown log level `{logLevel:G}`. Please update `BrokerR.Client.Logging`.");
+                        logger().LogWarning($"Unknown log level `{logLevel:G}`. Please update `BrokerR.Client.Logging`.");
                         break;
                 }
             }

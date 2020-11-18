@@ -1,9 +1,7 @@
 *
 
 !BrokerR.Http/
-BrokerR.Http/bin
-BrokerR.Http/obj
-
 !BrokerR.Http.Server/
-BrokerR.Http.Server/bin
-BrokerR.Http.Server/obj
+
+*/bin
+*/obj

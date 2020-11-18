@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 
-namespace BrokerR.Http.Client.Demo.Hosting
+namespace BrokerR.Http.Client.Hosting
 {
     public sealed class BrokerRConnectionService : IHostedService, IAsyncDisposable
     {

@@ -2,7 +2,7 @@ using System;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace BrokerR.Http.Client.Demo.Hosting
+namespace BrokerR.Http.Client.Hosting
 {
     public static class BrokerRExtensions
     {

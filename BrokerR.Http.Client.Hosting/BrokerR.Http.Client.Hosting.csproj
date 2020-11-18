@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <!-- Basic Properties -->
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Nullable>enable</Nullable>
+        <LangVersion>8</LangVersion>
+    </PropertyGroup>
+
+    <!-- NuGet -->
+    <PropertyGroup>
+        <PackageId>BrokerR.Http.Client.Hosting</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Nicklas Jensen</Authors>
+        <Description>The official client library for connecting to a BrokerR.Http.Server</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/nillerr/BrokerR</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/nillerr/BrokerR.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <!-- We don't have documentation on the library yet, so this will just result in lots of warnings. -->
+        <!-- <GenerateDocumentationFile>true</GenerateDocumentationFile>-->
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="2.2.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
+        <PackageReference Include="BrokerR.Http.Client" Version="1.0.2" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(Configuration)' != 'Release' ">
+        <ProjectReference Include="..\BrokerR.Http.Client\BrokerR.Http.Client.csproj" />
+    </ItemGroup>
+
+</Project>

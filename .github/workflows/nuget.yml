@@ -33,3 +33,12 @@ jobs:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
           NUPKG_PROJECT: BrokerR.Http.Client
         run: ./nuget
+        
+      - name: Pack BrokerR.Http.Client.Hosting
+        run: dotnet pack BrokerR.Http.Client.Hosting --configuration Release --include-symbols --include-source
+        
+      - name: Publish BrokerR.Http.Client.Hosting
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+          NUPKG_PROJECT: BrokerR.Http.Client.Hosting
+        run: ./nuget
