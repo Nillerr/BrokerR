@@ -10,7 +10,7 @@
     <!-- NuGet -->
     <PropertyGroup>
         <PackageId>BrokerR.Http</PackageId>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <Authors>Nicklas Jensen</Authors>
         <Description>The official client library for connecting to a BrokerR.Http.Server</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -25,7 +25,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" />
       <PackageReference Include="System.Text.Json" Version="4.7.2" />
     </ItemGroup>
 
