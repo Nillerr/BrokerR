@@ -26,8 +26,8 @@ namespace BrokerR.Http.Client.Demo
             var connectionString = Configuration.GetConnectionString("BrokerR");
             var crmOptions = Configuration.GetSection(CRMOptions.CRM).Get<CRMOptions>();
 
-            services.AddBrokerR(connectionString, (s, broker) => BrokerROptionsExtensions.WithCRM(broker
-                        .ConfigureLogging(BrokerRLogLevel.Debug), crmOptions, crm => crm
+            services.AddBrokerR(connectionString, (s, broker) => broker
+                .ConfigureLogging(BrokerRLogLevel.Debug).WithCRM(crmOptions, crm => crm
                     .WithEntity("contacts", ContactChanged.Create)
                     .WithEntity("accounts", AccountChanged.Create)
                 )

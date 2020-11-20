@@ -10,7 +10,7 @@
     <!-- NuGet -->
     <PropertyGroup>
         <PackageId>BrokerR.Http.Client.Hosting</PackageId>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <Authors>Nicklas Jensen</Authors>
         <Description>The official client library for connecting to a BrokerR.Http.Server</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -29,7 +29,7 @@
     </ItemGroup>
 
     <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
-        <PackageReference Include="BrokerR.Http.Client" Version="1.0.2" />
+        <PackageReference Include="BrokerR.Http.Client" Version="1.0.3" />
     </ItemGroup>
 
     <ItemGroup Condition=" '$(Configuration)' != 'Release' ">
