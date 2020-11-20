@@ -1,4 +1,5 @@
 using System;
+using BrokerR.Http.Client.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BrokerR.Http.Client.Demo.Hosting.CRM

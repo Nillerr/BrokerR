@@ -1,4 +1,5 @@
 using System;
+using BrokerR.Http.Client.Hosting;
 
 namespace BrokerR.Http.Client.Demo.Hosting.CRM
 {

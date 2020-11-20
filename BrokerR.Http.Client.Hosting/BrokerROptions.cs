@@ -1,9 +1,9 @@
 using System;
+using BrokerR.Http.Client.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using BrokerR.Http.Client.Logging;
 
-namespace BrokerR.Http.Client.Demo.Hosting
+namespace BrokerR.Http.Client.Hosting
 {
     public sealed class BrokerROptions
     {
@@ -31,7 +31,7 @@ namespace BrokerR.Http.Client.Demo.Hosting
 
         /// <summary>
         /// Configures the underlying <see cref="BrokerRConnection"/> to log messages to an instance of
-        /// <see cref="ILogger"/>.
+        /// <see cref="Microsoft.Extensions.Logging.ILogger"/>.
         /// </summary>
         /// <param name="level">The minimum level of logging</param>
         /// <returns>The options</returns>

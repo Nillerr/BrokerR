@@ -2,14 +2,14 @@
 
     <!-- Basic Properties -->
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>netstandard2.1</TargetFramework>
         <Nullable>enable</Nullable>
         <LangVersion>8</LangVersion>
     </PropertyGroup>
 
     <!-- NuGet -->
     <PropertyGroup>
-        <PackageId>BrokerR.Http</PackageId>
+        <PackageId>BrokerR.Http.Client.Hosting</PackageId>
         <Version>1.0.1</Version>
         <Authors>Nicklas Jensen</Authors>
         <Description>The official client library for connecting to a BrokerR.Http.Server</Description>
@@ -23,9 +23,17 @@
         <!-- We don't have documentation on the library yet, so this will just result in lots of warnings. -->
         <!-- <GenerateDocumentationFile>true</GenerateDocumentationFile>-->
     </PropertyGroup>
-
+    
     <ItemGroup>
-      <PackageReference Include="System.Text.Json" Version="4.7.2" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="2.2.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
+        <PackageReference Include="BrokerR.Http.Client" Version="1.0.3" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(Configuration)' != 'Release' ">
+        <ProjectReference Include="..\BrokerR.Http.Client\BrokerR.Http.Client.csproj" />
     </ItemGroup>
 
 </Project>

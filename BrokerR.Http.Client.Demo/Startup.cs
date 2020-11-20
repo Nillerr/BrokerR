@@ -1,7 +1,7 @@
+using BrokerR.Http.Client.Demo.Hosting.CRM;
+using BrokerR.Http.Client.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using BrokerR.Http.Client.Demo.Hosting;
-using BrokerR.Http.Client.Demo.Hosting.CRM;
 using BrokerR.Http.Client.Logging;
 
 namespace BrokerR.Http.Client.Demo
@@ -27,8 +27,7 @@ namespace BrokerR.Http.Client.Demo
             var crmOptions = Configuration.GetSection(CRMOptions.CRM).Get<CRMOptions>();
 
             services.AddBrokerR(connectionString, (s, broker) => broker
-                .ConfigureLogging(BrokerRLogLevel.Debug)
-                .WithCRM(crmOptions, crm => crm
+                .ConfigureLogging(BrokerRLogLevel.Debug).WithCRM(crmOptions, crm => crm
                     .WithEntity("contacts", ContactChanged.Create)
                     .WithEntity("accounts", AccountChanged.Create)
                 )

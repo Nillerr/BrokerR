@@ -1,10 +1,8 @@
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
-using JetBrains.Annotations;
 
 namespace BrokerR.Http
 {
-    [PublicAPI]
     public sealed class WebhookRequest
     {
         [JsonPropertyName("url")]
